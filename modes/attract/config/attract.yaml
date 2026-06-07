@@ -5,3 +5,8 @@
 
 slide_player:
   mode_attract_started: attract
+
+sound_player:
+  mode_attract_started:
+    freesound_community-calm-music-64526:
+      bus: music
