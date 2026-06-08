@@ -4,35 +4,48 @@ switches:
   # Cabinet Swtiches
 
   s_flipper_left:
-    number: 0-0-1
+    number: 0-0-25
     tags: left_flipper
+
+  s_flipper_left_eos:
+    number: 0-0-1
 
   s_flipper_right: 
     number: 0-0-2
     tags: right_flipper
 
+  s_flipper_right_eos:
+    number: 0-0-27  
+
   # Trough Switches
 
   s_trough_1:
-    number: 0-0-17 
+    number: 0-0-17
+    type: 'NC' 
 
   s_trough_2:
     number: 1-0-11
+    type: 'NC'
 
   s_trough_3:
     number: 1-0-2
+    type: 'NC'
 
   s_trough_4:
     number: 1-0-8
+    type: 'NC'
 
   s_trough_5:
     number: 1-0-1
+    type: 'NC'
 
   s_trough_6:
     number: 1-0-3
+    type: 'NC'
 
   s_trough_jam:
     number: 0-0-26
+    type: 'NC'
 
   s_plunger_lane:
     number: 0-0-3

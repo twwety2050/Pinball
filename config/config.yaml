@@ -7,6 +7,13 @@
 # include everything here, or create sub-config files to be
 # imported and merged with this one.
 
+hardware:
+  platform: opp
+  driverboards: gen2
+
+opp:
+  ports: COM3, COM4
+ 
 config:
   - config_ball_devices.yaml
   - config_coils.yaml
@@ -18,6 +25,26 @@ modes:
   - base
 
 playfields:
-  playfiled:
-    default_source_device: bd_trough
+  playfield:
+    default_source_device: bd_plunger
     tags: default
+
+flippers:
+  
+  left_flipper:
+    main_coil: c_flipper_left
+    activation_switch: s_flipper_left
+    eos_switch: s_flipper_left_eos
+    use_eos: true
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500ms
+    enable_events: machine_reset_phase_3
+  
+  right_flipper:
+    main_coil: c_flipper_right
+    activation_switch: s_flipper_right
+    eos_switch: s_flipper_right_eos
+    use_eos: true
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500ms
+    enable_events: machine_reset_phase_3
